@@ -1,0 +1,5 @@
+postCommit: {}
+  resources:
+    limits:
+      memory: 1Gi
+  runPolicy: Serial

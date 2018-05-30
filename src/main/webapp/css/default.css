@@ -1,0 +1,284 @@
+/*  Author: amitkumar466 
+	Purpose: Styling for home-page of EMT
+	Date: 02/04/2018
+*/
+body{
+   font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+   color: #3c3b3b;
+   background: #f7f7f7;
+   font-weight: 300;
+}
+.container {
+  max-width: 750px;
+  padding: 15px;
+}
+.navbar{
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #113f7e;
+	color: #FFFFFF;
+	font-size: 1.0em;
+	border: 0;
+}
+.navbar-inverse {
+    background-image: -webkit-linear-gradient(top, #113f7e 100%, #11294e 0%);
+    background-image: -o-linear-gradient(top, #113f7e 100%, #11294e 0%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#11294e), to(#113f7e));
+    background-image: linear-gradient(to bottom, #113f7e 100%, #11294e 0%);
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #b8b8b8;
+    padding-top: 16px;
+}
+.navbar-brand{
+	float: left;
+	min-height: 55px;
+	font-size: 1.3em;
+}
+.navbar-brand-text{
+	color: #FFFFFF;
+}
+.navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:hover,.navbar-inverse .navbar-nav .active a:focus{
+	background-color: #123461;
+	color: #85BB25;
+}
+.img-responsive{
+	max-height: 155%;
+    width: auto;
+    margin-top: -8px;
+}
+.emt-btn-plain{
+	width: 100%;
+	background-color: #f5f5f5;
+	border-color: #85BB25;
+	color: #4FBA0D;
+	font-size: 1.0em;
+}
+.emt-btn-plain:hover, .emt-btn-plain:focus{
+	border-color: #286104;
+	background-color: #286104;
+	color: #FFFFFF;
+}
+.emt-btn-dark{
+	width: 100%;
+	background-color: #85BB25;
+	border-color: #85BB25;
+	color: #FFFFFF;
+	font-size: 0.9em;
+}
+.emt-btn-dark:hover, .emt-btn-dark:focus{
+	border-color: #286104;
+	background-color: #286104;
+	color: #FFFFFF;
+}
+
+.mrgTop1Prcnt{
+	margin-top: 1%;
+}
+
+.mrgBtm1Prcnt{
+	margin-bottom: 1%;
+}
+
+.section-header{
+	text-align: center;	
+	font-family: Callibri;
+    margin-top: -10px;
+    text-transform: uppercase;
+}
+
+h2.section-heading.animated{
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.form-group label{
+	opacity: 0.7;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.section-logoheader{
+	background: #f7f7f7;
+    margin-top: 26px;
+    height: 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+.round {
+  	position: relative;
+  	zoom: 0.6;
+    margin-top: 1%;
+  	margin-left: 2%;
+}
+
+.round label {
+  background-color: #fff;
+  border: 1px solid #66bb6a;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="radio"] {
+  visibility: hidden;
+}
+
+.round input[type="radio"]:checked + label {
+  	background-color: #66bb6a;
+  	border-color: #66bb6a;
+}
+
+.round input[type="radio"]:checked + label:after {
+  	opacity: 1;
+}
+
+.modal-title{
+   	font-family: Verdana;
+	font-size: 18px;
+}
+.emt-brand-text{
+	color: #FFFFFF!important;
+    padding-left: 5px;
+    padding-top: 16px;
+}
+.emt-brand-text:hover,.emt-brand-text:focus{
+	color: #85BB25!important;
+}
+.emt-brand-text .switch{
+	color: #85BB25!important;
+}
+.emt-brand-text .switch:hover,.emt-brand-text .switch:focus{
+	color: #FFFFFF!important;
+}
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border-top: 2px solid #4cae4c!important;
+  border-right: 2px solid transparent;
+  animation: spinner .6s linear infinite;
+  z-index: 10000;
+  zoom: 4.0;
+}
+.spinnerBackdrop{
+	background: #000000;
+    height: 100%;
+    width: 100%;
+    z-index: 5000;
+    position: absolute;
+    opacity: 0.3;
+}
+.dashboard-stroke{
+	background: #FFFFFF;
+}
+.result-section{
+	border-color: #0c8201;
+    border: 1px solid;
+    margin: 6px 4px 4px 4px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    background-color: #efefef;
+}
+table.dataTable{
+    border-color: #c7c7c7;
+}
+th.sorting_asc, th.sorting_desc, th.sorting {
+    color: #dcdcdc;
+    background: #113f7e;
+    text-align: center;
+    font-family: Calibri;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #128711;
+    border-color: #128711;
+}
+.pagination>li>a, .pagination>li>span {
+    color: #128711;
+}
+.voice-icon {
+    position: fixed;
+    bottom: 0%;
+    right: 1%;
+    z-index: 100;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.voice-icon a {
+	background-color: transparent !important;
+	opacity:0.7;
+}
+.voice-icon a:hover, .voice-icon a:focus {
+	background-color: transparent !important;
+	opacity:1.0;
+}
+.fa-microphone {
+	color: white;
+}
+#overlay {
+    display: none;
+    position: absolute;
+    top: 8.5%;
+    bottom: 0;
+    background: #999;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: 100;
+}
+#popup {
+    display: none;
+    position: absolute;
+    top: 24%;
+    right: 0.5%;
+    background: #fff;
+    width: 350px;
+    height: 500px;
+    z-index: 200;
+    background-color: transparent;
+}
+#voice-icon {
+    cursor: pointer;
+}
+.popupcontent iframe {
+	width: 145%;
+    height: 445px;
+    border-radius: 5px;
+    border: 1px solid burlywood;
+    margin-left: -157px;
+}
+.fa-times-circle-o {
+	margin-right: 10px; 
+	font-size:  22px; 
+	opacity:  0.6;
+}
