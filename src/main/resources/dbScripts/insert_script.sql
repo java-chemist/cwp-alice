@@ -77,7 +77,7 @@ INSERT INTO cw_appointments
             , 'Firm Initiative'
             , 'Skype'
             , '05/31/2018'
-            , '11:00'
+            , '23:00'
             , '1 Hour'
        )
 ;
