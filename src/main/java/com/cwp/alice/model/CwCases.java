@@ -64,4 +64,10 @@ public class CwCases {
 		this.assignedCwName = assignedCwName;
 	}
 
+	@Override
+	public String toString() {
+		return "CwCases [id=" + id + ", cwId=" + cwId + ", date=" + date + ", desc=" + desc + ", status=" + status
+				+ ", assignedCwName=" + assignedCwName + "]";
+	}
+
 }

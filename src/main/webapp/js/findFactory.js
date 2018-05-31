@@ -32,6 +32,7 @@ var findFactory = (function () {
 			var caseDisplaySet = ['displaying case ', 'Opening details for case '];
 			var viewAppointmentSet = ['view all my appointments for today'];
 			var logoutSet = ['It was great working with you. See you next time!'];
+			var caseStatusUpdateSet = ['The status of the case is changed to '];
 			var currentExecutionObj = "";
 			if (true == (function(){var resultObj = compareObj.compare(msg, customCaseFilterSet);
 					currentExecutionObj = resultObj.resultValue; return resultObj.result})()) {
@@ -58,7 +59,12 @@ var findFactory = (function () {
 				factory.objName = "LOGOUT_SCENE";
 				factory.objValue = currentExecutionObj;
 				return factory;
-			}			
+			} else if (true == (function(){var resultObj = compareObj.compare(msg, caseStatusUpdateSet);
+							currentExecutionObj = resultObj.resultValue; return resultObj.result})()) {
+				factory.objName = "UPDATE_CASE_STATUS_SCENE";
+				factory.objValue = currentExecutionObj;
+				return factory;
+			}		
 		}
     }
 })();

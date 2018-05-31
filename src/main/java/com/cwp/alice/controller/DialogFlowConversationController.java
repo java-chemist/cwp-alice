@@ -255,13 +255,21 @@ public class DialogFlowConversationController extends AIServiceServlet {
 			} else if (intentName.equalsIgnoreCase("UpdateCaseStatusIntent")) {
 				// Business Case: 10
 				CwCases cwCase = cwpServices.getCaseByCaseId(caseId);
+				System.out.println("Matched case is: " + cwCase.toString());
 				String responseOut = null;
-				if (!newStatus.equalsIgnoreCase(CaseStatus.APPROVED.value())
-						&& !newStatus.equalsIgnoreCase(CaseStatus.DENIED.value())) {
-					responseOut = "It seems you have not provided a valid status. Status can only be changed to either APPROVED or DENIED.";
-					requestRootObject.getResult().getMetadata().setIntentName("Default Fallback Intent");
+				if (null != cwCase && cwCase.getCwId() != cwUsers.getCwId()) {
+					responseOut = "You do not have permission to update the case " + caseId
+							+ ". Please reach out to case owner " + cwCase.getAssignedCwName() + " at email "
+							+ cwUsers.getEmail();
+
 				} else {
-					responseOut = dfcServices.updateCaseStatus(cwCase, newStatus);
+					if (!newStatus.equalsIgnoreCase(CaseStatus.APPROVED.value())
+							&& !newStatus.equalsIgnoreCase(CaseStatus.DENIED.value())) {
+						responseOut = "It seems you have not provided a valid status. Status can only be changed to either APPROVED or DENIED.";
+						requestRootObject.getResult().getMetadata().setIntentName("Default Fallback Intent");
+					} else {
+						responseOut = dfcServices.updateCaseStatus(cwCase, newStatus);
+					}
 				}
 
 				responseRootObject.setSpeech(responseOut);

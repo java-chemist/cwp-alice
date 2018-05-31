@@ -92,6 +92,16 @@ function triggerInitialConversation(){
       .catch(handleError);
 }
 
+function speakResponse(speechText) {
+    var msg = new SpeechSynthesisUtterance(speechText);
+    var voices = window.speechSynthesis.getVoices();
+    msg.default = false;
+    msg.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0];
+    msg.lang = 'en-GB';
+    
+    window.speechSynthesis.speak(msg);
+}
+
 function handleResponse(serverResponse) {
     // Set a timer just in case. so if there was an error speaking or whatever, there will at least be a prompt to continue
     var timer = window.setTimeout(function() { startListening(); }, 5000);
@@ -166,6 +176,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     ev.preventDefault();
   });
   
+  $("#voice-icon").on('click', function(){
+	  $(overlay).css('display','block');
+      $(popup).css('display','block');
+      if($(".time-indicator-content").text() === undefined || $(".time-indicator-content").text() === ""){
+      	triggerInitialConversation();
+      }        
+  });
+  
   const timeIndicatorContent = (document.querySelector(".time-indicator-content") !== undefined
 		  	&& document.querySelector(".time-indicator-content") !== null)?
 		  document.querySelector(".time-indicator-content").innerHTML: undefined;		  
@@ -173,9 +191,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	  var result = runAliceFilterCommand($('.item-container:last .item').text());
 	  console.log('result is: '+result);
 	  addBotItem('Your result is ready.');
-	  window.speechSynthesis.speak('Your result is ready.');
+	  speakResponse('Your result is ready.');
 	  
-	  //Open the existing Alice window and scroll to bottom
+	  //Open the existing ALICE window and scroll to bottom
 	  $(document).ready(function(){
 		  $('#voice-icon').click();
 		  $('.app-content').scrollTop($('.app-content')[0].scrollHeight);

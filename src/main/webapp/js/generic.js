@@ -6,14 +6,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var minimize = $("#minimizeAlice");
     var close = $("#closeAlice");
     
-	$(button).on('click', function(){
-		$(overlay).css('display','block');
-        $(popup).css('display','block');
-        if($(".time-indicator-content").text() === undefined || $(".time-indicator-content").text() === ""){
-        	triggerInitialConversation();
-        }        
-	});
-	
 	$(minimize).on('click', function(){
 		$(overlay).css('display','none');
         $(popup).css('display','none');
