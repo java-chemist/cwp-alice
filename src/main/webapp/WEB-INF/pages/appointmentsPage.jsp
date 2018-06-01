@@ -60,22 +60,22 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav w-100">
-					<li><a href="${pageContext.request.contextPath}/cwDashboard">My
+					<li><a href="javascript:navigateURL('cwDashboard')">My
 							Dashboard</a></li>
 				</ul>
 				<ul class="nav navbar-nav w-100">
 					<li><a
-						href="${pageContext.request.contextPath}/cwCaseCreation">Add
+						href="javascript:navigateURL('cwCaseCreation')">Add
 							New Case</a></li>
 				</ul>
 				<ul class="nav navbar-nav w-100">
 					<li class="active"><a
-						href="${pageContext.request.contextPath}/cwAppointment">My
+						href="javascript:navigateURL('cwAppointment')">My
 							Appointments</a></li>
 				</ul>
 				<ul class="nav navbar-nav w-100">
 					<li><a
-						href="${pageContext.request.contextPath}/cwAccountDetails">My
+						href="javascript:navigateURL('cwAccountDetails')">My
 							Account</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
