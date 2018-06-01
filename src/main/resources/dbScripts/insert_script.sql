@@ -76,7 +76,7 @@ INSERT INTO cw_appointments
             , 'Joe Gatto'
             , 'Firm Initiative'
             , 'Skype'
-            , '05/31/2018'
+            , '06/01/2018'
             , '23:00'
             , '1 Hour'
        )
@@ -252,7 +252,7 @@ INSERT INTO cw_cases
        VALUES
        (101
             , '04/13/2018'
-            , '{"pt":"TANF","hoh":"John Doe","adultCnt":"2","childrenCnt":"2","monthlyIncome":"$150","assistanceElig":"$100"}'
+            , '{"pt":"TANF","hoh":"John Doe","adultCnt":"2","childrenCnt":"2","monthlyIncome":"$150","assistanceElig":"$120"}'
             , 'Pending Review'
             , 'Luv Gupta'
        )
@@ -268,7 +268,7 @@ INSERT INTO cw_cases
        VALUES
        (101
             , '04/16/2018'
-            , '{"pt":"TANF","hoh":"Jane Doe","adultCnt":"1","childrenCnt":"3","monthlyIncome":"$100","assistanceElig":"$175"}'
+            , '{"pt":"TANF","hoh":"Jane Doe","adultCnt":"1","childrenCnt":"3","monthlyIncome":"$120","assistanceElig":"$175"}'
             , 'Approved'
             , 'Luv Gupta'
        )
@@ -300,7 +300,7 @@ INSERT INTO cw_cases
        VALUES
        (102
             , '04/13/2018'
-            , '{"pt":"TANF","hoh":"Robert Brown","adultCnt":"3","childrenCnt":"6","monthlyIncome":"$500","assistanceElig":"$100"}'
+            , '{"pt":"TANF","hoh":"Robert Brown","adultCnt":"3","childrenCnt":"6","monthlyIncome":"$500","assistanceElig":"$130"}'
             , 'Pending Review'
             , 'Amit Kumar'
        )
